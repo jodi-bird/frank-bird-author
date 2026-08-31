@@ -287,5 +287,25 @@
 
     </main>
 
+<script>
+    const book = document.querySelector('.book');
+    const cover = document.querySelector('.book-front');
+    const returnButton = document.querySelector('.return-cover');
+
+    cover.addEventListener('click', () => {
+        book.classList.add('flipped');
+    });
+
+    returnButton.addEventListener('click', () => {
+        book.classList.remove('flipped');
+    });
+</script>
+
+
+
+
+
+
+
 </body>
 </html>
