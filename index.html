@@ -176,6 +176,18 @@
 .book.flipped .book-inner {
     transform: rotateY(180deg);
 }
+
+.version {
+    position: fixed;
+    right: 10px;
+    bottom: 6px;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.65rem;
+    color: rgba(255, 255, 255, 0.3);
+    letter-spacing: 0.08em;
+}
+
         @media (max-width: 700px) {
             .page {
                 padding-top: 45px;
@@ -284,7 +296,7 @@
         <p class="coming">
             Coming Soon
         </p>
-
+        <p class="version">v0.1</p>
     </main>
 
 <script>
@@ -300,12 +312,6 @@
         book.classList.remove('flipped');
     });
 </script>
-
-
-
-
-
-
 
 </body>
 </html>
