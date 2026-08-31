@@ -103,7 +103,79 @@
             letter-spacing: 0.5em;
             text-transform: uppercase;
         }
+.book {
+    width: 60%;
+    max-width: 700px;
+    min-width: 280px;
+    margin: 0 auto;
+    perspective: 1400px;
+}
 
+.book-inner {
+    position: relative;
+    width: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.9s ease;
+}
+
+.book-front,
+.book-back {
+    width: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.book-front {
+    position: relative;
+}
+
+.book-front .cover {
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+.book-back {
+    position: absolute;
+    inset: 0;
+    box-sizing: border-box;
+    transform: rotateY(180deg);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 7% 8%;
+    overflow: hidden;
+
+    color: #e8dfcf;
+    background: #111821;
+
+    border: 1px solid rgba(198, 145, 57, 0.75);
+    border-radius: 18px;
+    box-shadow: 0 20px 55px rgba(0, 0, 0, 0.45);
+
+    text-align: left;
+}
+
+.book-back p {
+    margin: 0 0 0.7em;
+    font-size: clamp(0.65rem, 1.05vw, 1rem);
+    line-height: 1.35;
+}
+
+.return-cover {
+    align-self: center;
+    margin-top: 0.5em;
+    padding: 8px 14px;
+    cursor: pointer;
+}
+
+.book.flipped .book-inner {
+    transform: rotateY(180deg);
+}
         @media (max-width: 700px) {
             .page {
                 padding-top: 45px;
@@ -116,7 +188,9 @@
             .cover {
                 width: 85%;
             }
-
+            .book {
+                width: 85%;
+            }
             .coming {
                 letter-spacing: 0.3em;
             }
