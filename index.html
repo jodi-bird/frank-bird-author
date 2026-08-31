@@ -173,6 +173,39 @@
 .back-text p {
     color: #202020;
 }
+.barcode-area {
+    width: 115px;
+    margin: 18px 0 0 auto;
+    text-align: center;
+}
+
+.barcode {
+    height: 42px;
+    background: repeating-linear-gradient(
+        90deg,
+        #111 0px,
+        #111 2px,
+        transparent 2px,
+        transparent 4px,
+        #111 4px,
+        #111 5px,
+        transparent 5px,
+        transparent 8px
+    );
+}
+
+.isbn {
+    margin-top: 4px;
+    color: #202020;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.55rem;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+}
+
+
+
+
 .book-back p {
     margin: 0 0 0.85em;
     font-family: Georgia, "Times New Roman", serif;
@@ -298,6 +331,12 @@
     <p>
         Humanity may have found a way to fight back.
     </p>
+
+    <div class="barcode-area">
+    <div class="barcode" aria-hidden="true"></div>
+    <div class="isbn">ISBN — coming soon</div>
+</div>
+
 </div>
     <button class="return-cover" type="button">Return to cover</button>
 </div>    </div>
